@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "C94MnKCRYAdcZIxAq4PRh0DWog030NF5hosen2iAvYzZ1HX2FOet6oKj8CH2WZu1t+KaZIGDrsukza1qdtuj4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Denis\\source\\repos\\DiscordSeleniumXP\\DiscordSeleniumXP\\DiscordSeleniumXP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Denis\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Denis\\.nuget\\packages\\selenium.webdriver\\4.0.1\\selenium.webdriver.4.0.1.nupkg.sha512",
+    "C:\\Users\\Denis\\.nuget\\packages\\selenium.webdriver.chromedriver\\96.0.4664.4500\\selenium.webdriver.chromedriver.96.0.4664.4500.nupkg.sha512"
+  ],
+  "logs": []
+}
