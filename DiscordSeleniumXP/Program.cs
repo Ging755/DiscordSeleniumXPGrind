@@ -12,8 +12,11 @@ Console.WriteLine("Login through mobile app scan QR to avoid captcha");
 Console.ReadLine();
 
 Service _service = new Service(_driver);
-_service.StartGrind("𝒜𝓃𝒾𝓂𝑒 𝐵𝒶𝓁𝓀𝒶𝓃", "「💭」degeneral");
+var choosenServer = _service.ChooseServer();
+await _service.StartGrind(choosenServer.ServerName, "「💭」degeneral");
 
 Console.ReadLine();
+
+_service.StopGrind();
 
 _driver.Close();

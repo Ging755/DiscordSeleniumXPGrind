@@ -13,6 +13,7 @@ namespace DiscordSeleniumXP
         private WebDriver _driver;
         private Actions _actions;
         private List<Server> _servers;
+        private Server _currentServer;
 
         public Service(WebDriver driver)
         {
@@ -21,15 +22,20 @@ namespace DiscordSeleniumXP
             _servers = new List<Server>();
             PrepareServers();
         }
-        public void StartGrind(string serverName, string channelName)
+        public async Task StartGrind(string serverName, string channelName)
         {
-            var server = _servers.Find(server => server.ServerName == serverName);
-            if(server != null)
+            _currentServer = _servers.Find(server => server.ServerName == serverName);
+            if (_currentServer != null)
             {
-                server.ChannelToGrind = channelName;
-                server.PrepareToGrind();
-                server.Grind();
+                _currentServer.ChannelToGrind = channelName;
+                _currentServer.PrepareToGrind();
+                await _currentServer.Grind();
             }
+        }
+
+        public async void StopGrind()
+        {
+            await _currentServer.StopGrind();
         }
 
         private void PrepareServers()
@@ -73,21 +79,54 @@ namespace DiscordSeleniumXP
         private List<Server> GetAllServers(List<IWebElement> serverGroups)
         {
             List<Server> servers = new List<Server>();
+            int id = 0;
 
             //Open all Server groups and get Servers and display server names
             foreach (var serverGroup in serverGroups)
             {
+
                 _actions.MoveToElement(serverGroup.FindElement(By.XPath(".//div//div[2]"))).Perform();
+                Thread.Sleep(250);
                 serverGroup.FindElement(By.XPath(".//div//div[2]")).Click();
                 _actions.Reset();
 
-                foreach(var serverElement in serverGroup.FindElements(By.XPath(".//ul//div[@class='listItem-2Ig28I']")))
+                try
                 {
-                    servers.Add(new Server(_driver, serverElement));
+                    Thread.Sleep(250);
+                    var temp = serverGroup.FindElement(By.XPath(".//div//div[@class='closedFolderIconWrapper-1I9YfS']"));
+
+                    _actions.MoveToElement(serverGroup.FindElement(By.XPath(".//div//div[2]"))).Perform();
+                    Thread.Sleep(250);
+                    serverGroup.FindElement(By.XPath(".//div//div[2]")).Click();
+                    _actions.Reset();
+                }
+                catch
+                {
+                    //empty catch to just keep going if closed folder is not there anymore
+                }
+
+
+                foreach (var serverElement in serverGroup.FindElements(By.XPath(".//ul//div[@class='listItem-2Ig28I']")))
+                {
+                    id++;
+                    servers.Add(new Server(_driver, serverElement, id));
                 }
             }
 
             return servers;
+        }
+
+        //choose server
+        public Server ChooseServer()
+        {
+            foreach (var server in _servers)
+            {
+                Console.WriteLine(server.ServerName + " " + server.Id);
+            }
+
+            Console.WriteLine("Choose server with Id");
+            var id = int.Parse(Console.ReadLine());
+            return _servers.FirstOrDefault(server => server.Id == id);
         }
     }
 }
