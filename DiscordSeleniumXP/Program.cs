@@ -8,6 +8,18 @@ _driver.Navigate().GoToUrl("https://discord.com/login");
 
 //login through mobile to avoid captcha
 
+//Some random stuffs and console.reads to make a merge conflict
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+Console.WriteLine("TEST");
+
 Console.WriteLine("Login through mobile app scan QR to avoid captcha");
 Console.ReadLine();
 
