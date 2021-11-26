@@ -36,8 +36,12 @@ Console.WriteLine("TEST TEST");
 //extra kool
 Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
+<<<<<<< HEAD
 
 //Few more stuff
+=======
+//this is a cool comment
+>>>>>>> 333b26c (cool comment)
 Console.WriteLine("TEST TEST");
 
 Console.WriteLine("Login through mobile app scan QR to avoid captcha");
