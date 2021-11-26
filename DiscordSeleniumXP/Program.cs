@@ -14,6 +14,7 @@ Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
+//COOL
 Console.WriteLine("TEST TEST");
 //extra stuff
 Console.WriteLine("TEST TEST");
@@ -32,6 +33,7 @@ Console.WriteLine("TEST TEST");
 // Some more stuff
 Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
+//extra kool
 Console.WriteLine("TEST TEST");
 Console.WriteLine("TEST TEST");
 
