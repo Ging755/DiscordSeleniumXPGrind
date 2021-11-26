@@ -8,6 +8,7 @@ _driver.Navigate().GoToUrl("https://discord.com/login");
 
 //login through mobile to avoid captcha
 
+<<<<<<< HEAD
 //Some random stuffs and console.reads to make a merge conflict
 Console.WriteLine("TEST");
 Console.WriteLine("TEST");
@@ -27,6 +28,32 @@ Console.WriteLine("TEST");
 Console.WriteLine("TEST");
 Console.WriteLine("TEST");
 Console.WriteLine("TEST");
+=======
+//Another Test stuff
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+
+
+
+
+//RANDOM TEXT
+
+//Some more stuff
+
+
+
+Console.WriteLine("TEST TEST");
+// Some more stuff
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+>>>>>>> 21e36c6 (Stuff)
 
 Console.WriteLine("Login through mobile app scan QR to avoid captcha");
 Console.ReadLine();
