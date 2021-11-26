@@ -8,6 +8,31 @@ _driver.Navigate().GoToUrl("https://discord.com/login");
 
 //login through mobile to avoid captcha
 
+//Another Test stuff
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+
+
+
+
+//RANDOM TEXT
+
+//Some more stuff
+
+
+
+Console.WriteLine("TEST TEST");
+// Some more stuff
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+Console.WriteLine("TEST TEST");
+
 Console.WriteLine("Login through mobile app scan QR to avoid captcha");
 Console.ReadLine();
 
